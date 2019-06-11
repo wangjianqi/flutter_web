@@ -38,6 +38,7 @@ class _GalleryAppState extends State<GalleryApp> {
   GalleryOptions _options;
   Timer _timeDilationTimer;
 
+  //路由
   Map<String, WidgetBuilder> _buildRoutes() {
     // For a different example of how to set up an application routing table
     // using named routes, consider the example in the Navigator class documentation:
@@ -56,6 +57,7 @@ class _GalleryAppState extends State<GalleryApp> {
       theme: kLightGalleryTheme,
       textScaleFactor: kAllGalleryTextScaleValues[0],
       timeDilation: timeDilation,
+      //平台
       platform: defaultTargetPlatform,
     );
   }
@@ -70,6 +72,7 @@ class _GalleryAppState extends State<GalleryApp> {
   void _handleOptionsChanged(GalleryOptions newOptions) {
     setState(() {
       if (_options.timeDilation != newOptions.timeDilation) {
+        //取消定时器
         _timeDilationTimer?.cancel();
         _timeDilationTimer = null;
         if (newOptions.timeDilation > 1.0) {
@@ -93,6 +96,7 @@ class _GalleryAppState extends State<GalleryApp> {
       builder: (BuildContext context) {
         return MediaQuery(
           data: MediaQuery.of(context).copyWith(
+            //大小
             textScaleFactor: _options.textScaleFactor.scale,
           ),
           child: child,
@@ -125,6 +129,7 @@ class _GalleryAppState extends State<GalleryApp> {
       routes: _buildRoutes(),
       builder: (BuildContext context, Widget child) {
         return Directionality(
+          //方向
           textDirection: _options.textDirection,
           child: _applyTextScaleFactor(child),
         );

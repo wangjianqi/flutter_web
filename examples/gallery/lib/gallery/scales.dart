@@ -10,6 +10,7 @@ class GalleryTextScaleValue {
   final double scale;
   final String label;
 
+  //判断是否相等
   @override
   bool operator ==(dynamic other) {
     if (runtimeType != other.runtimeType) return false;
@@ -17,6 +18,7 @@ class GalleryTextScaleValue {
     return scale == typedOther.scale && label == typedOther.label;
   }
 
+  //相等
   @override
   int get hashCode => hashValues(scale, label);
 

@@ -194,6 +194,7 @@ class _Heading extends StatelessWidget {
     final ThemeData theme = Theme.of(context);
     return _OptionsItem(
       child: DefaultTextStyle(
+        //主题颜色
         style: theme.textTheme.body1.copyWith(
           fontFamily: 'GoogleSans',
           color: theme.accentColor,

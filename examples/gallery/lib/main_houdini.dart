@@ -7,6 +7,7 @@ import 'package:flutter_web_ui/ui.dart' as ui;
 import 'main.dart' as app;
 
 void main() {
+  //ui
   ui.persistedPictureFactory = ui.houdiniPictureFactory;
   app.main();
 }
