@@ -106,6 +106,7 @@ class _OptionsItem extends StatelessWidget {
         padding: _kItemPadding,
         alignment: AlignmentDirectional.centerStart,
         child: DefaultTextStyle(
+          //获取style
           style: DefaultTextStyle.of(context).style,
           maxLines: 2,
           overflow: TextOverflow.fade,
