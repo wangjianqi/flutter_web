@@ -126,6 +126,7 @@ class _GalleryAppState extends State<GalleryApp> {
       showPerformanceOverlay: _options.showPerformanceOverlay,
       checkerboardOffscreenLayers: _options.showOffscreenLayersCheckerboard,
       checkerboardRasterCacheImages: _options.showRasterCacheImagesCheckerboard,
+      ///设置路由
       routes: _buildRoutes(),
       builder: (BuildContext context, Widget child) {
         return Directionality(

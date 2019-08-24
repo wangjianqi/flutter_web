@@ -4,6 +4,7 @@
 
 import 'package:flutter_web/material.dart';
 
+///主题
 class GalleryTheme {
   const GalleryTheme._(this.name, this.data);
 
@@ -11,6 +12,7 @@ class GalleryTheme {
   final ThemeData data;
 }
 
+///两个主题
 final GalleryTheme kDarkGalleryTheme =
     GalleryTheme._('Dark', _buildDarkTheme());
 final GalleryTheme kLightGalleryTheme =

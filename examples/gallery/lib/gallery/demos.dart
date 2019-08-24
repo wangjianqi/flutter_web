@@ -10,6 +10,7 @@ import 'icons.dart';
 // TODO: As Demos are added and complete, uncomment _buildGalleryDemos sections.
 
 class GalleryDemoCategory {
+  //构造方法
   const GalleryDemoCategory._({this.name, this.icon});
   @required
   final String name;

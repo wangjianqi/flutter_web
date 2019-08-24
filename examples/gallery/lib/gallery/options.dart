@@ -8,6 +8,7 @@ import 'about.dart';
 import 'scales.dart';
 import 'themes.dart';
 
+///配置
 class GalleryOptions {
   GalleryOptions({
     this.theme,
@@ -54,8 +55,10 @@ class GalleryOptions {
     );
   }
 
+  ///
   @override
   bool operator ==(dynamic other) {
+    ///先判断类型
     if (runtimeType != other.runtimeType) return false;
     final GalleryOptions typedOther = other;
     return theme == typedOther.theme &&
